@@ -28,7 +28,11 @@ const Display = () => {
             if (newCalculation && !isNaN(buttonValue)) {
                 setValue(buttonValue);
             } else {
-                setValue(value + buttonValue);
+                if (["+", "-", "*", "/"].includes(value.slice(-1)) && isNaN(buttonValue)) {
+                    setValue(value.slice(0, -1) + buttonValue);
+                } else {
+                    setValue(value + buttonValue);
+                }
             }
             setNewCalculation(false);
         }
