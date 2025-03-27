@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Display.css';
+import './display.css';
 import Numpad from './Numpad';
 
 const Display = () => {
