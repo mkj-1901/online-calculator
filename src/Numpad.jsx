@@ -16,7 +16,7 @@ const Numpad = ({ onButtonClick }) => {
             {allButtons.map((button) => (
                 <button
                     key={button}
-                    className="p-4 text-lg text-white border border-gray-300 rounded cursor-pointer transition hover:bg-gray-700"
+                    className="p-4 text-lg text-white border border-gray-300 rounded cursor-pointer transition hover:bg-gray-700 flex items-center justify-center"
                     style={{
                         backgroundColor: '#070921',
                     }}
