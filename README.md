@@ -2,9 +2,9 @@
 This calculator is a project made for Essentials of Business Informatics under Professor Ranjana Vyas.
 
 ## Made by
-Mayank Kumar Jha (IIB2024010), 
-Krish Dhaked (IIB2024008), 
-Himanshu Vitthalani (IIB2024009), 
+Mayank Kumar Jha (IIB2024010) <br>
+Krish Dhaked (IIB2024008) <br>
+Himanshu Vitthalani (IIB2024009) <br>
 Archee Jaiswal (IIB2024022)
 
 ## Tech Stack Used
