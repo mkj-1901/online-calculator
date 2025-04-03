@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './display.css';
 import Numpad from './Numpad';
+import "tailwindcss";
 
 const Display = () => {
     const [value, setValue] = useState("");
@@ -19,7 +19,7 @@ const Display = () => {
                 setValue("Error");
                 setNewCalculation(true);
             }
-        } else if (buttonValue === "C") {
+        } else if (buttonValue === "Clear") {
             setValue("");
             setNewCalculation(false);
         } else if (buttonValue === "History") {
@@ -39,20 +39,20 @@ const Display = () => {
     };
 
     return (
-        <div className="calculator-container">
-            <div className="display-tile">
+        <div className="flex flex-col items-center w-full">
+            <div className="bg-gray-100 border border-gray-300 rounded-md p-4 mb-4 w-full shadow-md">
                 <input
                     type="text"
-                    className="display-input"
+                    className="w-full text-xl text-right border-none outline-none bg-transparent text-gray-800"
                     value={value}
                     readOnly
                 />
             </div>
             <Numpad onButtonClick={handleButtonClick} />
             {showHistory && (
-                <div className="history">
-                    <h3>History</h3>
-                    <ul>
+                <div className="mt-4 p-4 bg-gray-700 text-white rounded-md w-full text-center shadow-lg">
+                    <h3 className="mb-2">History</h3>
+                    <ul className="list-none p-0">
                         {history.map((entry, index) => (
                             <li key={index}>{entry}</li>
                         ))}
